@@ -33,12 +33,12 @@ with col2:
 
 cities = st.selectbox('Select the City',sorted(cities))
 
-target = st.number_input('Target',min_value=0,max_value=720)
+target = st.number_input('Target',min_value=0)
 
 col3,col4,col5 = st.columns(3)
 
 with col3 :
-    score = st.number_input('Batting Team Score' ,min_value=0,max_value=720)
+    score = st.number_input('Batting Team Score' ,min_value=0)
 
 with col4:
     overs = st.number_input('Overs',min_value=0, max_value=20)
@@ -50,9 +50,6 @@ if st.button('Predict Probability'):
 
     if overs == 0:
         st.header("Please enter number of overs")
-
-    elif score>overs*36:
-        st.header("Please enter correct input")
 
     elif wickets==10 and score>target:
         st.header("Please enter correct input")
