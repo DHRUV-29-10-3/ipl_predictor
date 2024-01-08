@@ -48,8 +48,8 @@ with col5:
 
 if st.button('Predict Probability'):
 
-    if overs == 0:
-        st.header("Please enter number of overs")
+    if overs == 0 or target ==0 :
+        pass
 
     elif wickets==10 and score>target:
         st.header("Please enter correct input")
